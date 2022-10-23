@@ -16,6 +16,7 @@ h1 {
   position: absolute;
   top: 5vh;
   font-size: 5rem;
+  text-align: center;
 }
 
 .bookshelf {
@@ -91,12 +92,34 @@ h1 {
   display: block;
 }
 
-.book:hover + .hidden-book-title {
-  display: block;
+.mobile-books {
+  display: none;
 }
 
-.hidden-book-title {
-  display: none;
-  position: absolute;
-  top: 80vh;
+
+@media only screen and (max-width: 896px) {
+
+  h1 {
+    font-size: 2rem;
+  }
+  .bookshelf {
+    display: none;
+  }
+
+  .mobile-books {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    width: 60%;
+  }
+
+  .mobile-book {
+    background-color: aqua;
+    width: 100%;
+    aspect-ratio: 150 / 50;
+    border-radius: 3px;
+    margin: 1px;
+  }
+
+ 
+  
 }
